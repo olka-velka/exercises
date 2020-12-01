@@ -1,0 +1,29 @@
+package classesPractice;
+
+import java.util.Scanner;
+
+public class assessmentTask {
+
+ public static String getEncryptedName(String name) {
+	 String newName = " ";
+	 if (name != null) {
+		for (int i=(name.length()-1); i>=0; i--){
+			
+			newName += (name.charAt(i));
+		}
+	newName = newName.toLowerCase();
+	return newName;
+	}else {
+		return "Try again with valid name";
+	}
+ }
+ 
+ public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("What is your name?");
+		String name = input.nextLine();
+		
+		System.out.println("Here is your encrypted name: " + getEncryptedName(name));
+ 	}
+}
